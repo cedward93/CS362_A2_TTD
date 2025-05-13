@@ -18,15 +18,20 @@ class TestCheckPwd (unittest.TestCase):
 
     def testing_long_length(self):
         """testing a length that is more than the length"""
-        self.assertFalse(check_pwd("Test~lengthOverTwenty"))
+        self.assertFalse(check_pwd("Test~length0verTwenty"))
 
     def testing_lower_case(self):
         """testing an entry that has no lowercase letters"""
-        self.assertFalse(check_pwd("TEST~NO~LOW"))
+        self.assertFalse(check_pwd("TEST~N0~LOW"))
 
     def testing_upper_case(self):
         """testing an entry that has no uppercase letters"""
-        self.assertFalse(check_pwd("test~no~up"))
+        self.assertFalse(check_pwd("test~no~up1"))
+
+    def testing_no_num(self):
+        """testing an entry that has no numbers"""
+        self.assertFalse(check_pwd("test~no~nuM"))
+
 
 
 if __name__ == '__main__':
