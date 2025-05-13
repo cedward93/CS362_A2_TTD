@@ -9,6 +9,8 @@ def check_pwd(pwd: str) -> bool:
     has_lower = False
     has_upper = False
     has_digit = False
+    has_symbol = False
+    symbols = "~`!@#$%^&*()_+-="
 
     # itterating through the string to search for elements
     for letters in pwd:
@@ -18,6 +20,8 @@ def check_pwd(pwd: str) -> bool:
             has_upper = True
         if letters.isdigit():
             has_digit = True
+        if letters in symbols:
+            has_symbol = True
 
     # verifying that the elements were indeed present
     if has_lower is False:
@@ -25,5 +29,7 @@ def check_pwd(pwd: str) -> bool:
     if has_upper is False:
         return False
     if has_digit is False:
+        return False
+    if has_symbol is False:
         return False
     return True
