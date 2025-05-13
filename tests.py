@@ -32,6 +32,10 @@ class TestCheckPwd (unittest.TestCase):
         """testing an entry that has no numbers"""
         self.assertFalse(check_pwd("test~no~nuM"))
 
+    def testing_for_special_char(self):
+        """testing an entry that has no special characters"""
+        self.assertFalse(check_pwd("testNoSpec1"))
+
 
 
 if __name__ == '__main__':
