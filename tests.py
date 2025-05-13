@@ -22,7 +22,8 @@ class TestCheckPwd (unittest.TestCase):
 
     def testing_lower_case(self):
         """testing an entry that has no lowercase letters"""
-        self.assertFalse("TEST~NO~LOW")
+        self.assertFalse(check_pwd("TEST~NO~LOW"))
+
 
 if __name__ == '__main__':
     unittest.main()
