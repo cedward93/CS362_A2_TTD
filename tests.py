@@ -8,7 +8,9 @@ class TestCheckPwd (unittest.TestCase):
         """tests takes a blank entry and should return false"""
         self.assertFalse(check_pwd(""))
 
-
+    def testing_valid_entry(self):
+        """testing for a valid length"""
+        self.assertTrue(check_pwd("Test~length13"))
 
 
 if __name__ == '__main__':
