@@ -20,5 +20,9 @@ class TestCheckPwd (unittest.TestCase):
         """testing a length that is more than the length"""
         self.assertFalse(check_pwd("Test~lengthOverTwenty"))
 
+    def testing_lower_case(self):
+        """testing an entry that has no lowercase letters"""
+        self.assertFalse("TEST~NO~LOW")
+
 if __name__ == '__main__':
     unittest.main()
